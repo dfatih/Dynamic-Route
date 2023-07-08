@@ -7,7 +7,7 @@
   },
   {
    "optionDest": "filenames",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_fastest_route_NONREM.py"
+   "value": "YOUR_PATH/Dynamic Route/code_with_removal/bbox_fastest_route_NONREM.py"
   },
   {
    "optionDest": "onefile",
@@ -19,7 +19,7 @@
   },
   {
    "optionDest": "icon_file",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/img/istockphoto-1153439787-612x612.ico"
+   "value": "YOUR_PATH/Dynamic Route/img/istockphoto-1153439787-612x612.ico"
   },
   {
    "optionDest": "name",
@@ -75,39 +75,39 @@
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_check_weather_NONREM.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_check_weather_NONREM.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_graph_functions.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_graph_functions.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_name_finder.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_name_finder.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_to_graphml.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_to_graphml.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_turn_angle.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_turn_angle.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/bbox_weather_fetcher.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/bbox_weather_fetcher.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/GUI_DIRECTIONS.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/GUI_DIRECTIONS.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/sp_coordniates.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/sp_coordniates.py;."
   },
   {
    "optionDest": "datas",
-   "value": "D:/Informatik/S 6/SWP/swp-datenverwaltung/Dynamic Route/sp_functions.py;."
+   "value": "YOUR_PATH/swp-datenverwaltung/Dynamic Route/code_with_removal/sp_functions.py;."
   }
  ],
  "nonPyinstallerOptions": {
