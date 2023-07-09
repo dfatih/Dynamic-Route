@@ -60,7 +60,7 @@ def create_GUI_directions(TEXTLIST, G, ROUTE_PLOT):
             TEXT_WIDGET.image_create(tk.END, image=TK_IMG)
             TEXT_WIDGET.insert(tk.END, "Error loading image\n")
 
-# Prevent the image references from being garbage collected
+    # Prevent the image references from being garbage collected
     WINDOW.IMAGE_REF = IMAGE_REF
 
     # Function to handle the plot button click event

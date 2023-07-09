@@ -1,12 +1,11 @@
+import bbox_graph_functions as graph_func
+
 import osmnx as ox
 import time
 
-import bbox_graph_functions as graph_func
-
-
-import colorama
+"""import colorama
 from colorama import Fore, Back, Style
-colorama.init(autoreset=True)
+colorama.init(autoreset=True)"""
 
 def fetch_graph():
     # GROB! Bounding box coordinates for Berlin-Brandenburg
@@ -25,28 +24,26 @@ def fetch_graph():
     DOWNLOAD_E = time.time() - DOWNLOAD_S
     # Check if the graph contains any nodes and edges
     if len(G.nodes) > 0 and len(G.edges) > 0:
-        print("Road network data with turn restrictions retrieved successfully.")
+        #print("Road network data with turn restrictions retrieved successfully.")
 
         ##############################-------------EDGE SPEEDS | TRAVEL TIMES
-        print("Add edge speeds + travel times")
-
-        edge_speed_s = time.time()
+        """print('\n')
+        print("Add edge speeds + travel times") # if information needed
+        print('\n')"""
+        #edge_speed_s = time.time()
         GRAPH = ox.add_edge_speeds(G)
-        edge_speed_e = time.time() - edge_speed_s 
+        #edge_speed_e = time.time() - edge_speed_s 
 
-        edge_travel_s = time.time()
+        #edge_travel_s = time.time()
         GRAPH = ox.add_edge_travel_times(GRAPH)
-        edge_travel_e = time.time() - edge_travel_s
-
-        print(f"Done, \nTime needed add_edge_speeds: {edge_speed_e}, \nTime needed add_edge_travel_times: {edge_travel_e} \n")
+        #edge_travel_e = time.time() - edge_travel_s
+        #print(f"Done, \nTime needed add_edge_speeds: {edge_speed_e}s, \nTime needed add_edge_travel_times: {edge_travel_e}s \n")
         ##############################-------------EDGE SPEEDS | TRAVEL TIMES ; 
-        print(f"Graph hat: {DOWNLOAD_E} gebraucht zum downloaden. \n")
+        #print(f"Graph hat: {DOWNLOAD_E} gebraucht zum downloaden. \n")
         ##############################-------------SAVE GRAPH
-        ox.save_graphml(GRAPH, filepath='./graphNONREM/berlin_drive_network-osmnx.graphml')  # changed path !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        ox.save_graphml(GRAPH, filepath='./graphNONREM/berlin_drive_network-osmnx.graphml')
         ##############################-------------SAVE GRAPH ; 
         return GRAPH
-
-
         #save_graph_e = time.time() - save_graph_s
 
         #print(f"Graph hat: {save_graph_e} gebraucht zum downloaden und speichern. \n")

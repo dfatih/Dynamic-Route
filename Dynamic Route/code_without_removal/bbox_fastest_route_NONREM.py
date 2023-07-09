@@ -104,18 +104,29 @@ while(QUIT_Y_N != "q"):
     sp_func.give_direction_with_GUI(DIRECTIONS, G, FASTEST_PATH) # also startsup the GUI
     print("If you want to calculate a route please press any button except q ")
     QUIT_Y_N = GUI.get_input()# input("If you want to calculate a route please press any button accept q: ")
+    ###########################--------------------------------------SHORTEST PATH MIT LA DIRECTION ;
     #^^^^^^^^^^^^^^^^^^^^^^^^^^-----------------DIE WHILE LOOP SOLLTE HIER ENDEN
-CREATE_TIME = os.path.getmtime('./graphNONREM/berlin_drive_network-osmnx-wetter.graphml')
-CURR_TIME = time.time()
+try:
+    CREATE_TIME = os.path.getmtime('./graphNONREM/berlin_drive_network-osmnx-wetter.graphml')
+    CURR_TIME = time.time()
 
-if os.path.getsize('./graphNONREM/berlin_drive_network-osmnx-wetter.graphml') // 1024 == 0 or CURR_TIME - CREATE_TIME >= 86400:
+    if os.path.getsize('./graphNONREM/berlin_drive_network-osmnx-wetter.graphml') // 1024 == 0 or CURR_TIME - CREATE_TIME >= 86400:
+        print(Style.BRIGHT+Fore.YELLOW+"Saving graph! \n")
+        GRAPH_SAVE_S = time.time()
+        ##############################-------------SAVE WEATHER GRAPH
+        ox.save_graphml(G_MAPPED, filepath='./graphNONREM/berlin_drive_network-osmnx-wetter.graphml')  # or for instant remove: "./graph/berlin_drive_network-osmnx.graphml"
+        ##############################-------------SAVE WEATHER GRAPH ; 
+        GRAPH_SAVE_E = time.time() - GRAPH_SAVE_S
+        print(f"Time for save: {GRAPH_SAVE_E}\n")
+except:
     print(Style.BRIGHT+Fore.YELLOW+"Saving graph! \n")
     GRAPH_SAVE_S = time.time()
     ##############################-------------SAVE WEATHER GRAPH
     ox.save_graphml(G_MAPPED, filepath='./graphNONREM/berlin_drive_network-osmnx-wetter.graphml')  # or for instant remove: "./graph/berlin_drive_network-osmnx.graphml"
     ##############################-------------SAVE WEATHER GRAPH ; 
     GRAPH_SAVE_E = time.time() - GRAPH_SAVE_S
-    print(f"Time for save: {GRAPH_SAVE_E}\n")
+    print(f"Time for save: {GRAPH_SAVE_E}s\n")
+
 
 print(Style.BRIGHT+Fore.RED+"Closing... \n")
 time.sleep(10)

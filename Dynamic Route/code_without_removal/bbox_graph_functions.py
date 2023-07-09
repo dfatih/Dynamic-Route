@@ -96,16 +96,24 @@ def load_graph():
         print(Style.BRIGHT+Fore.GREEN+f"Graph Loaded, Time needed: {G_E}")
         return GRAPH
     except CustomException:
-        loader = Loader2("Downloading Graph from bounding box...")
-        loader.start()
+        loader2 = Loader2("Downloading Graph from bounding box...")
+        loader2.start()
+        DOWNLOAD_S = time.time()
         GRAPH = graphml.fetch_graph()
-        loader.done = True
+        loader2.done = True
+        DOWNLOAD_E = time.time() - DOWNLOAD_S
+        print('\n\n')
+        print(Style.BRIGHT+Fore.GREEN+f"Graph Downloaded and saved, Time needed: {DOWNLOAD_E}")
         return GRAPH
     except:
-        loader = Loader2("Downloading Graph from bounding box...")
-        loader.start()
+        loader3 = Loader2("Downloading Graph from bounding box...")
+        loader3.start()
+        DOWNLOAD_S = time.time()
         GRAPH = graphml.fetch_graph()
-        loader.done = True
+        loader3.done = True
+        DOWNLOAD_E = time.time() - DOWNLOAD_S
+        print('\n\n')
+        print(Style.BRIGHT+Fore.GREEN+f"Graph Downloaded and saved, Time needed: {DOWNLOAD_E}")
         return GRAPH
 
 def map_turn_restrictions(G):

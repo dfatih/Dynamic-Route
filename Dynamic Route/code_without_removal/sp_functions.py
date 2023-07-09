@@ -122,7 +122,7 @@ def plot_route(G, FASTEST_PATH):
     ox.plot_graph_route(G, FASTEST_PATH, filepath=f'./start_to_dest.svg', save=True, node_size = 0, edge_linewidth = 0.1, route_linewidth=0.5, route_alpha=0.5, orig_dest_size=10, ax=None)
     plot_e = time.time() - plot_s
 
-    print(f"Time for plotting was: {plot_e}")
+    print(f"Time for plotting was: {plot_e}s")
 
 def streetnames(G, FASTEST_PATH):
     names = []
