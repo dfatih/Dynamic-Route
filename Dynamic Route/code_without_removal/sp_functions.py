@@ -22,7 +22,7 @@ def start_to_dest():
     # print(f"Latitude: {e_latitude}, Longitude: {e_longitude}")
     return (s_latitude, s_longitude), (e_latitude, e_longitude)
 
-def shortest_path_with_directions(G, START, DESTINATION):
+def shortest_path_with_directions(G, START, DESTINATION): # This is the node removal method (very bad :| )
     FASTEST_PATH = ox.shortest_path(G, START, DESTINATION, weight='travel_time')
     ###########################-------------------------------------- GET ALL IMPORTANT LISTS FOR DIRECTION
     LAT_LON_LIST = sp_coo.get_lat_lon(G, FASTEST_PATH)
@@ -170,6 +170,6 @@ def get_travel_time_FP(G, FASTEST_PATH, val=0):
     for n in range(0, len(FASTEST_PATH) - 1):
         IN_SECONDS += G[FASTEST_PATH[n]][FASTEST_PATH[n + 1]][0]['travel_time']
     IN_DAYS = (IN_SECONDS / 86400) # / 60 / 60 / 24
-    if val == 0:
+    if val == 0: # is needed for the condition checking and live_date tracking
         return math.floor(IN_DAYS)
     return IN_SECONDS

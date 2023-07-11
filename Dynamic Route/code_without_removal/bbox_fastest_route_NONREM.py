@@ -129,4 +129,4 @@ except:
 
 
 print(Style.BRIGHT+Fore.RED+"Closing... \n")
-time.sleep(10)
+time.sleep(5)

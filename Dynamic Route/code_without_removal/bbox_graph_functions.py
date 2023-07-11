@@ -71,6 +71,7 @@ def loader():
             task = tasks.pop(0)
             time.sleep(0.15)
             console.log(f"{task} complete")
+    print('\n')
 
 def load_graph():
     FILE_PATH = "./graphNONREM/berlin_drive_network-osmnx.graphml" # or for instant remove: "./graph/berlin_drive_network-osmnx.graphml"
@@ -102,7 +103,7 @@ def load_graph():
         GRAPH = graphml.fetch_graph()
         loader2.done = True
         DOWNLOAD_E = time.time() - DOWNLOAD_S
-        print('\n\n')
+        print('\n')
         print(Style.BRIGHT+Fore.GREEN+f"Graph Downloaded and saved, Time needed: {DOWNLOAD_E}")
         return GRAPH
     except:
@@ -112,7 +113,7 @@ def load_graph():
         GRAPH = graphml.fetch_graph()
         loader3.done = True
         DOWNLOAD_E = time.time() - DOWNLOAD_S
-        print('\n\n')
+        print('\n')
         print(Style.BRIGHT+Fore.GREEN+f"Graph Downloaded and saved, Time needed: {DOWNLOAD_E}")
         return GRAPH
 
