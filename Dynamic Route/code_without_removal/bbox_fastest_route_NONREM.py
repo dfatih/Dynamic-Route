@@ -1,8 +1,8 @@
 import bbox_check_weather_NONREM as check_weather_NONREM
 import bbox_weather_fetcher as weather_fetch
-import GUI_DIRECTIONS as GUI
 import bbox_graph_functions as graph_func
 
+import GUI_DIRECTIONS as GUI
 
 import sp_functions as sp_func
 

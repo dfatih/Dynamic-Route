@@ -1,6 +1,6 @@
 import bbox_name_finder as name_finder
 
-import sp_coordniates as sp_coo
+import sp_coordinates as sp_coo
 
 import GUI_DIRECTIONS as GUI
 
