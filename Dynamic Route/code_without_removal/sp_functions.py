@@ -108,8 +108,10 @@ def check_all_cond(G, FASTEST_PATH, CONDITIONS, DEPART, ARRIVAL, START, DESTINAT
                 FASTEST_PATH = ox.shortest_path(G, START, DESTINATION, weight='travel_time')
                 TIME_NEEDED_FOR_FP = get_travel_time_FP(G, FASTEST_PATH)
             except:
-                print("No route was possible to make, due to restrictions!")
-                return
+                print("No route was possible to make, due to restrictions ... Exiting program!")
+                time.sleep(5)
+                quit()
+                return # needed maybe for later optimizations, when comparing returns etc.
         LIVE_TIME_NEEDED = TIME_NEEDED_FOR_FP
         LIVE_DATE = DEPART - TODAY
     DEPART = DEPART + dt.timedelta(days=LIVE_DATE.days)
