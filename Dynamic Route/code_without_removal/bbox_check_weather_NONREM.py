@@ -97,7 +97,7 @@ def check_rain(G, DEPART, ARRIVAL):
         if isinstance(W_DATA, str): # this is important, because at one time the user downloades the first time ever and another time he uses already a graph downloaded before
             W_DATA = ast.literal_eval(W_DATA)
         while DIFF <= (ARRIVAL - TODAY).days:
-            if W_DATA['rain_sum'][DIFF] > 1:
+            if W_DATA['rain_sum'][DIFF] != None and W_DATA['rain_sum'][DIFF] > 1:
                 W_DATA['rain_sum'][DIFF] = None
                 SET = True
             DIFF += 1
@@ -115,7 +115,7 @@ def check_snow(G, DEPART, ARRIVAL):
         if isinstance(W_DATA, str): # this is important, because at one time the user downloades the first time ever and another time he uses already a graph downloaded before
             W_DATA = ast.literal_eval(W_DATA)
         while DIFF <= (ARRIVAL - TODAY).days:
-            if W_DATA['snowfall_sum'][DIFF] > 0.5:
+            if W_DATA['rain_sum'][DIFF] != None and W_DATA['snowfall_sum'][DIFF] > 0.5:
                 W_DATA['snowfall_sum'][DIFF] = None
                 SET = True
             DIFF += 1
@@ -133,7 +133,7 @@ def check_wind(G, DEPART, ARRIVAL):
         if isinstance(W_DATA, str): # this is important, because at one time the user downloades the first time ever and another time he uses already a graph downloaded before
             W_DATA = ast.literal_eval(W_DATA)
         while DIFF <= (ARRIVAL - TODAY).days:
-            if W_DATA['windspeed_10m_max'][DIFF] > 39:
+            if W_DATA['rain_sum'][DIFF] != None and W_DATA['windspeed_10m_max'][DIFF] > 39:
                 W_DATA['windspeed_10m_max'][DIFF] = None
                 SET = True
             DIFF += 1
@@ -151,7 +151,7 @@ def check_frost(G, DEPART, ARRIVAL):
         if isinstance(W_DATA, str): # this is important, because at one time the user downloades the first time ever and another time he uses already a graph downloaded before
             W_DATA = ast.literal_eval(W_DATA)
         while DIFF <= (ARRIVAL - TODAY).days:
-            if W_DATA['temperature_2m_min'][DIFF] < 0:
+            if W_DATA['rain_sum'][DIFF] != None and W_DATA['temperature_2m_min'][DIFF] < 0:
                 W_DATA['temperature_2m_min'][DIFF] = None
                 SET = True
             DIFF += 1
