@@ -173,10 +173,13 @@ def w_main_exec(G):
         print(f"Time needed for weather conditions to be realised: {WT_CON_E}")
         if len(WEATHER_G.nodes) > 0 and len(WEATHER_G.edges) > 0:
             return WEATHER_G, COND_LIST_ROUTE, DATE_S, DATE_E
-        return "Graph is emtpy due to all nodes have a condition, which was restricted.."
+        print("Graph is emtpy due to all nodes have a condition .. closing")
+        time.sleep(5)
+        quit()
     else:
-        print("Could not do a forcast ... given dates not suitable \n\n")
-        exit(1)
+        print("Could not do a forcast ... given dates not suitable try again .. \n\n")
+        time.sleep(2)
+        return w_main_exec(G)
     ###########################-------------------------------------CHECK WEATHER CONDITONS ;
 
 if __name__ == "__main__": 
